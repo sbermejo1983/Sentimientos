@@ -1,0 +1,308 @@
+/* ================================================================= 
+   ESTILO MÍSTICO Y ESPIRITUALISTA - style.css
+   Para: Sentimientos de un alma atormentada por la iluminación
+   ================================================================= */
+
+/* --- 1. Variables Globales y Colores (Paleta Mística/Gótica) --- */
+:root {
+    --color-fondo: #0a090c;
+    --color-fondo-secundario: #131118;
+    --color-texto: #d1ccdf;
+    --color-texto-claro: #f3f0ff;
+    --color-acento: #8c6cf5; /* Violeta místico */
+    --color-acento-hover: #b09bff;
+    --color-oro: #d4af37; /* Toques celestiales / dorados apagados */
+    --color-borde: #2b253b;
+    --fuente-principal: 'Georgia', serif;
+    --fuente-sans: 'Inter', sans-serif;
+}
+
+/* --- 2. Estilos Generales y Reset --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente-principal);
+    line-height: 1.8;
+    background-image: radial-gradient(circle at 50% 20%, #1a1626 0%, var(--color-fondo) 70%);
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+a {
+    color: var(--color-acento);
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-acento-hover);
+    text-shadow: 0 0 8px rgba(140, 108, 245, 0.5);
+}
+
+/* --- 3. Cabecera (Header / Site Header) --- */
+header, 
+.cabecera-sitio, 
+.site-header {
+    background-color: var(--color-fondo-secundario);
+    border-bottom: 1px solid var(--color-borde);
+    padding: 3rem 1.5rem;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+header::after,
+.cabecera-sitio::after,
+.site-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 50%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-oro), transparent);
+}
+
+.titulo-principal, 
+.site-title,
+.header-container h1 {
+    font-size: 2.2rem;
+    color: var(--color-texto-claro);
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin-bottom: 0.8rem;
+    text-shadow: 0 0 12px rgba(140, 108, 245, 0.3);
+}
+
+.subtitulo-principal, 
+.site-subtitle,
+.header-container p {
+    font-size: 1.1rem;
+    color: var(--color-oro);
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+/* --- 4. Navegación --- */
+nav, 
+.navegacion-principal, 
+.site-nav {
+    margin-top: 2rem;
+}
+
+.lista-navegacion, 
+.nav-list, 
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.item-nav a, 
+.nav-link, 
+nav a {
+    color: var(--color-texto);
+    font-family: var(--fuente-sans);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    transition: all 0.4s ease;
+}
+
+.item-nav a:hover, 
+.nav-link:hover, 
+nav a:hover {
+    color: var(--color-oro);
+    border-color: rgba(212, 175, 55, 0.4);
+    background-color: rgba(140, 108, 245, 0.05);
+}
+
+/* --- 5. Contenido Principal y Secciones --- */
+main, 
+.contenido-principal, 
+.main-content {
+    max-width: 850px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+}
+
+section, 
+.seccion-sinopsis, 
+.seccion-significado, 
+.seccion-reflexion, 
+.seccion-fragmento, 
+.seccion-promocion,
+.content-section,
+.bio-article,
+.book-section,
+.style-section {
+    background: rgba(19, 17, 24, 0.7);
+    border: 1px solid var(--color-borde);
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    position: relative;
+    backdrop-filter: blur(5px);
+}
+
+section::before {
+    content: '✧';
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-fondo);
+    padding: 0 10px;
+    color: var(--color-oro);
+    font-size: 1rem;
+}
+
+h2, 
+.titulo-seccion, 
+.article-heading,
+section h2 {
+    font-size: 1.6rem;
+    color: var(--color-texto-claro);
+    margin-bottom: 1.5rem;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+h3, 
+.subtitulo-concepto, 
+.section-title,
+section h3 {
+    font-size: 1.2rem;
+    color: var(--color-oro);
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+p, 
+.parrafo-texto, 
+.paragraph {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+/* --- 6. Citas y Bloques Destacados --- */
+blockquote, 
+.cita-libro, 
+.cita-obra, 
+.critical-quote, 
+.author-quote {
+    margin: 2.5rem 0;
+    padding: 1.5rem 2rem;
+    border-left: 2px solid var(--color-oro);
+    background: linear-gradient(90deg, rgba(212, 175, 55, 0.03), transparent);
+    font-style: italic;
+    color: var(--color-texto-claro);
+}
+
+cite, 
+.autor-cita, 
+.quote-author {
+    display: block;
+    margin-top: 0.8rem;
+    font-size: 0.9rem;
+    color: var(--color-oro);
+    font-style: normal;
+    letter-spacing: 0.5px;
+}
+
+/* --- 7. Listas y Elementos Especiales --- */
+ul:not(.lista-navegacion):not(.nav-list) {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.6rem;
+}
+
+aside, 
+.sidebar-reflection, 
+.related-links-aside {
+    background: #0d0b12;
+    border: 1px dashed var(--color-borde);
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+details {
+    background: var(--color-fondo-secundario);
+    border: 1px solid var(--color-borde);
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+summary {
+    cursor: pointer;
+    color: var(--color-oro);
+    font-family: var(--fuente-sans);
+    outline: none;
+}
+
+/* --- 8. Botones y Acciones --- */
+.boton-enlace, 
+.enlace-externo {
+    display: inline-block;
+    background: transparent;
+    color: var(--color-oro);
+    border: 1px solid var(--color-oro);
+    padding: 0.8rem 1.8rem;
+    font-family: var(--fuente-sans);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    margin-top: 1rem;
+    transition: all 0.4s ease;
+    text-align: center;
+}
+
+.boton-enlace:hover, 
+.enlace-externo:hover {
+    background: var(--color-oro);
+    color: var(--color-fondo);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.contenedor-acciones {
+    text-align: center;
+}
+
+/* --- 9. Pie de Página (Footer) --- */
+footer, 
+.pie-sitio, 
+.site-footer, 
+pie {
+    background-color: var(--color-fondo-secundario);
+    border-top: 1px solid var(--color-borde);
+    text-align: center;
+    padding: 3rem 1.5rem;
+    margin-top: 5rem;
+    font-size: 0.9rem;
+    color: #8c82a0;
+}
+
+.texto-copyright, 
+.footer-text {
+    margin-bottom: 0.5rem;
+}
+
+.enlace-blog-pie a, 
+.enlace-externo-pie a,
+.footer-subtext {
+    color: var(--color-oro);
+}
