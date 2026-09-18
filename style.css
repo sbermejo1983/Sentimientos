@@ -290,10 +290,12 @@ pie {
     background-color: var(--color-fondo-secundario);
     border-top: 1px solid var(--color-borde);
     text-align: center;
-    padding: 3rem 1.5rem;
+    padding: 1rem 1.5rem;
     margin-top: 5rem;
     font-size: 0.9rem;
     color: #8c82a0;
+    display: flex;
+    justify-content: space-between;
 }
 
 .texto-copyright, 
