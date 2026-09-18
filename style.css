@@ -286,7 +286,7 @@ summary {
 footer, 
 .pie-sitio, 
 .site-footer, 
-pie {
+footer {
     background-color: var(--color-fondo-secundario);
     border-top: 1px solid var(--color-borde);
     text-align: center;
